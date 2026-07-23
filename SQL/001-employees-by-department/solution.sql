@@ -10,14 +10,15 @@
 -- Sales      | 2              | 52500.00
 
 SELECT 
-    -- TODO: Select department name, count of employees, and average salary
+    d.dept_name,
+    COUNT(e.emp_id) AS employee_count,
+    AVG(e.salary) AS avg_salary
 FROM 
-    -- TODO: Join departments and employees tables
-WHERE
-    -- TODO: Optional: add WHERE conditions if needed
-GROUP BY
-    -- TODO: Group by department
-HAVING
-    -- TODO: Filter groups with at least 2 employees
-ORDER BY
-    -- TODO: Order by department name alphabetically
+    departments d
+    INNER JOIN employees e ON d.dept_id = e.dept_id
+GROUP BY 
+    d.dept_name
+HAVING 
+    COUNT(e.emp_id) >= 2
+ORDER BY 
+    d.dept_name ASC;

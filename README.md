@@ -24,23 +24,27 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | 001 | Two Sum | Easy | Hash Map, One-Pass | O(n) / O(n) | ✅ Complete |
 | 002 | Contains Duplicate | Easy | Hash Set, Early Exit | O(n) / O(n) | ✅ Complete |
 | 003 | Best Time to Buy and Sell Stock | Easy | Greedy, One-Pass Tracking | O(n) / O(1) | ✅ Complete |
-| 004 | Two Sum II (Sorted) | Easy | Two-Pointer | O(n) / O(1) | 🔄 In Progress |
+| 004 | Two Sum II (Sorted) | Easy | Two-Pointer | O(n) / O(1) | ✅ Complete |
+| 005 | Longest Substring Without Repeating | Easy | Sliding Window, HashMap | O(n) / O(min(n, charset)) | 🔄 In Progress |
+| 006 | Container With Most Water | Easy | Two-Pointer, Area Formula | O(n) / O(1) | 🔄 In Progress |
 
 ### **SQL Fundamentals**
 | # | Problem | Difficulty | Concepts | Status |
 |---|---------|-----------|----------|--------|
-| 001 | Employees by Department | Easy | JOIN, GROUP BY, HAVING, Aggregation | 🔄 In Progress |
+| 001 | Employees by Department | Easy | JOIN, GROUP BY, HAVING, Aggregation | ✅ Complete |
+| 002 | Find Duplicate Emails | Easy | GROUP BY, HAVING, COUNT | 🔄 In Progress |
 
 ---
 
 ## 🎯 Learning Path
-
-### Current Phase: **Array Foundations**
-✅ Hashing & Sets (Contains Duplicate)  
-✅ Hash Maps & Complements (Two Sum)  
+undamentals (Core Patterns)**
+✅ Hashing & Sets (Contains Duplicate, Two Sum)  
 ✅ Greedy Algorithms (Stock Problem)  
-🔄 Two-Pointer Technique (Two Sum II)  
-⏳ Sliding Window (Next)  
+✅ Two-Pointer Technique (Two Sum II)  
+🔄 Sliding Window (Longest Substring)  
+🔄 Two-Pointer Variants (Container With Most Water)  
+⏳ Prefix Sums (Next)  
+⏳ Stack & Queuendow (Next)  
 ⏳ Prefix Sums (Next)  
 
 ### Upcoming: **SQL Fundamentals**
@@ -81,11 +85,22 @@ leetcode-solutions/
 
 ## 🚀 Key Milestones & Ratings
 
-### **Session 1: July 22, 2026 (Evening)**
-**Problems:** 3 (Contains Duplicate, Best Time to Buy Stock, Two Sum II)  
-**Rating:** 10/10 on completed problems (002, 003)  
+### **Session 2 + 1 SQL (Contains Duplicate, Best Time to Buy Stock, SQL: Employees by Department)  
+**Rating:** 10/10  
 - ✅ Hashing pattern mastered
 - ✅ Greedy one-pass solution mastered
+- ✅ SQL JOIN + GROUP BY + HAVING mastered
+
+### **Session 2: July 23, 2026 (Evening)**
+**Problems:** 2 (Two Sum II, SQL: Find Duplicate Emails)  
+**Rating:** 9.7/10  
+- ✅ Two-pointer technique mastered
+- ✅ Group-based filtering mastered
+
+### **Session 3: July 24, 2026 (In Progress)**
+**Problems:** 2 DSA (Sliding Window, Two-Pointer Variant) + 1 SQL (Duplicate Emails)  
+- 🔄 Sliding Window pattern (in progress)
+- 🔄 Area calculation with greedy approachtion mastered
 - 🔄 Two-pointer pattern (in progress)
 
 ---
