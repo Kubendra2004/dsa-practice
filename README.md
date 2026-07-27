@@ -129,25 +129,22 @@ leetcode-solutions/
 - ✅ Two-pointer technique mastered
 - ✅ Group-based filtering mastered
 
-### Session 3: July 24, 2026 (Completed)
+### Session 3: July 23-27, 2026 (Completed)
 
-**Problems:** 2 DSA (Sliding Window, Two-Pointer Variant) + 1 SQL (Duplicate Emails)  
-**Rating:** 10/10
-
-- ✅ Sliding Window pattern mastered
-- ✅ Area calculation with greedy approach mastered
-- ✅ Two-pointer pattern mastered
-- ✅ SQL GROUP BY + HAVING mastered
-
-### Session 4: July 27, 2026 (Evening)
-
-**Problems:** 2 DSA + 1 SQL + 2 new scaffolds  
+**Problems:** 2 DSA + 1 SQL  
 **Rating:** 10/10
 
 - ✅ Longest Substring Without Repeating Characters completed - 10/10
 - ✅ Container With Most Water completed - 10/10
 - ✅ SQL: Find Duplicate Emails completed - 10/10
-- 🔄 Prefix Sum scaffolds created for Subarray Sum Equals K and Find Pivot Index
+
+### Session 4: July 27, 2026 (In Progress)
+
+**Problems:** 2 DSA prefix-sum problems in progress  
+**Focus:** Subarray Sum Equals K, Find Pivot Index
+
+- 🔄 Problem 7: Subarray Sum Equals K
+- 🔄 Problem 8: Find Pivot Index
 
 ---
 
