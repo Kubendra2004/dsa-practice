@@ -112,6 +112,33 @@ leetcode-solutions/
 
 ## 🚀 Key Milestones & Ratings
 
+### Session 1: Foundational Hashing and SQL
+
+**Problems:** 2 DSA + 1 SQL
+**Rating:** 10/10
+
+- ✅ Hashing pattern mastered
+- ✅ Greedy one-pass solution mastered
+- ✅ SQL JOIN + GROUP BY + HAVING mastered
+
+### Session 2: July 23, 2026 (Evening)
+
+**Problems:** 2 (Two Sum II, SQL: Find Duplicate Emails)  
+**Rating:** 9.7/10
+
+- ✅ Two-pointer technique mastered
+- ✅ Group-based filtering mastered
+
+### Session 3: July 24, 2026 (Completed)
+
+**Problems:** 2 DSA (Sliding Window, Two-Pointer Variant) + 1 SQL (Duplicate Emails)  
+**Rating:** 10/10
+
+- ✅ Sliding Window pattern mastered
+- ✅ Area calculation with greedy approach mastered
+- ✅ Two-pointer pattern mastered
+- ✅ SQL GROUP BY + HAVING mastered
+
 ### Session 4: July 27, 2026 (Evening)
 
 **Problems:** 2 DSA + 1 SQL + 2 new scaffolds  
@@ -121,30 +148,6 @@ leetcode-solutions/
 - ✅ Container With Most Water completed - 10/10
 - ✅ SQL: Find Duplicate Emails completed - 10/10
 - 🔄 Prefix Sum scaffolds created for Subarray Sum Equals K and Find Pivot Index
-
-### Session 2 + 1 SQL (Contains Duplicate, Best Time to Buy Stock, SQL: Employees by Department)
-
-**Rating:** 10/10
-
-- ✅ Hashing pattern mastered
-- ✅ Greedy one-pass solution mastered
-- ✅ SQL JOIN + GROUP BY + HAVING mastered
-
-### **Session 2: July 23, 2026 (Evening)**
-
-**Problems:** 2 (Two Sum II, SQL: Find Duplicate Emails)  
-**Rating:** 9.7/10
-
-- ✅ Two-pointer technique mastered
-- ✅ Group-based filtering mastered
-
-### **Session 3: July 24, 2026 (In Progress)**
-
-**Problems:** 2 DSA (Sliding Window, Two-Pointer Variant) + 1 SQL (Duplicate Emails)
-
-- 🔄 Sliding Window pattern (in progress)
-- 🔄 Area calculation with greedy approachtion mastered
-- 🔄 Two-pointer pattern (in progress)
 
 ---
 
