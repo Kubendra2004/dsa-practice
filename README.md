@@ -36,21 +36,21 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | #   | Problem                 | Difficulty | Concepts                            | Status         |
 | --- | ----------------------- | ---------- | ----------------------------------- | -------------- |
 | 001 | Employees by Department | Easy       | JOIN, GROUP BY, HAVING, Aggregation | ✅ Complete    |
-| 002 | Find Duplicate Emails   | Easy       | GROUP BY, HAVING, COUNT             | 🔄 In Progress |
+| 002 | Find Duplicate Emails   | Easy       | GROUP BY, HAVING, COUNT             | ✅ Complete    |
 
 ---
 
 ## 🎯 Learning Path
 
-Fundamentals (Core Patterns)\*\*
+**Fundamentals (Core Patterns)**
 ✅ Hashing & Sets (Contains Duplicate, Two Sum)  
 ✅ Greedy Algorithms (Stock Problem)  
 ✅ Two-Pointer Technique (Two Sum II)  
-🔄 Sliding Window (Longest Substring)  
+✅ Sliding Window (Longest Substring)  
 ✅ Two-Pointer Variants (Container With Most Water)  
-⏳ Prefix Sums (Next)  
-⏳ Stack & Queuendow (Next)  
-⏳ Prefix Sums (Next)
+🔄 Prefix Sums (Next)  
+⏳ Stack & Queue (Later)  
+⏳ Advanced Patterns (Later)
 
 ### Upcoming: **SQL Fundamentals**
 
@@ -81,8 +81,28 @@ leetcode-solutions/
 │       ├── TwoSumII.java
 │       ├── two_sum_ii.ipynb
 │       └── README.md
+│   ├── 005-longest-substring-no-repeating/
+│   │   ├── LongestSubstringNoRepeating.java
+│   │   ├── longest_substring.ipynb
+│   │   └── README.md
+│   ├── 006-container-with-most-water/
+│   │   ├── ContainerWithMostWater.java
+│   │   ├── container_with_most_water.ipynb
+│   │   └── README.md
+│   ├── 007-subarray-sum-equals-k/
+│   │   ├── SubarraySumEqualsK.java
+│   │   ├── subarray_sum_equals_k.ipynb
+│   │   └── README.md
+│   └── 008-find-pivot-index/
+│       ├── FindPivotIndex.java
+│       ├── find_pivot_index.ipynb
+│       └── README.md
 └── SQL/
-    └── 001-employees-by-department/
+    ├── 001-employees-by-department/
+    │   ├── README.md
+    │   ├── schema.sql
+    │   └── solution.sql
+    └── 002-duplicate-emails/
         ├── README.md
         ├── schema.sql
         └── solution.sql
@@ -92,7 +112,16 @@ leetcode-solutions/
 
 ## 🚀 Key Milestones & Ratings
 
-### \*\*Session 2 + 1 SQL (Contains Duplicate, Best Time to Buy Stock, SQL: Employees by Department)
+### Session 4: July 27, 2026 (Evening)
+
+**Problems:** 2 DSA + 1 SQL + 2 new scaffolds
+
+- ✅ Longest Substring Without Repeating Characters completed
+- ✅ Container With Most Water completed
+- ✅ SQL: Find Duplicate Emails completed
+- 🔄 Prefix Sum scaffolds created for Subarray Sum Equals K and Find Pivot Index
+
+### Session 2 + 1 SQL (Contains Duplicate, Best Time to Buy Stock, SQL: Employees by Department)
 
 **Rating:** 10/10
 
