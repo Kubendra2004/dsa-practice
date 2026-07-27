@@ -22,21 +22,21 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 
 ### **Arrays Fundamentals**
 
-| #   | Problem                             | Difficulty | Concepts                  | Time/Space                | Status         |
-| --- | ----------------------------------- | ---------- | ------------------------- | ------------------------- | -------------- |
-| 001 | Two Sum                             | Easy       | Hash Map, One-Pass        | O(n) / O(n)               | ✅ Complete    |
-| 002 | Contains Duplicate                  | Easy       | Hash Set, Early Exit      | O(n) / O(n)               | ✅ Complete    |
-| 003 | Best Time to Buy and Sell Stock     | Easy       | Greedy, One-Pass Tracking | O(n) / O(1)               | ✅ Complete    |
-| 004 | Two Sum II (Sorted)                 | Easy       | Two-Pointer               | O(n) / O(1)               | ✅ Complete    |
-| 005 | Longest Substring Without Repeating | Easy       | Sliding Window, HashMap   | O(n) / O(min(n, charset)) | ✅ Complete    |
-| 006 | Container With Most Water           | Easy       | Two-Pointer, Area Formula | O(n) / O(1)               | ✅ Complete    |
+| #   | Problem                             | Difficulty | Concepts                  | Time/Space                | Status      |
+| --- | ----------------------------------- | ---------- | ------------------------- | ------------------------- | ----------- |
+| 001 | Two Sum                             | Easy       | Hash Map, One-Pass        | O(n) / O(n)               | ✅ Complete |
+| 002 | Contains Duplicate                  | Easy       | Hash Set, Early Exit      | O(n) / O(n)               | ✅ Complete |
+| 003 | Best Time to Buy and Sell Stock     | Easy       | Greedy, One-Pass Tracking | O(n) / O(1)               | ✅ Complete |
+| 004 | Two Sum II (Sorted)                 | Easy       | Two-Pointer               | O(n) / O(1)               | ✅ Complete |
+| 005 | Longest Substring Without Repeating | Easy       | Sliding Window, HashMap   | O(n) / O(min(n, charset)) | ✅ Complete |
+| 006 | Container With Most Water           | Easy       | Two-Pointer, Area Formula | O(n) / O(1)               | ✅ Complete |
 
 ### **SQL Fundamentals**
 
-| #   | Problem                 | Difficulty | Concepts                            | Status         |
-| --- | ----------------------- | ---------- | ----------------------------------- | -------------- |
-| 001 | Employees by Department | Easy       | JOIN, GROUP BY, HAVING, Aggregation | ✅ Complete    |
-| 002 | Find Duplicate Emails   | Easy       | GROUP BY, HAVING, COUNT             | ✅ Complete    |
+| #   | Problem                 | Difficulty | Concepts                            | Status      |
+| --- | ----------------------- | ---------- | ----------------------------------- | ----------- |
+| 001 | Employees by Department | Easy       | JOIN, GROUP BY, HAVING, Aggregation | ✅ Complete |
+| 002 | Find Duplicate Emails   | Easy       | GROUP BY, HAVING, COUNT             | ✅ Complete |
 
 ---
 

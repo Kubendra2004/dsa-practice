@@ -1,3 +1,4 @@
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,8 +8,7 @@ import java.util.Map;
  * Problem: Given an array of integers nums and an integer k, return the total
  * number of continuous subarrays whose sum equals to k.
  *
- * Concept: Prefix Sum + HashMap
- * Difficulty: Medium
+ * Concept: Prefix Sum + HashMap Difficulty: Medium
  */
 public class SubarraySumEqualsK {
 
