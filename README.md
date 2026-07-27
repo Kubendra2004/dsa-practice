@@ -114,11 +114,12 @@ leetcode-solutions/
 
 ### Session 4: July 27, 2026 (Evening)
 
-**Problems:** 2 DSA + 1 SQL + 2 new scaffolds
+**Problems:** 2 DSA + 1 SQL + 2 new scaffolds  
+**Rating:** 10/10
 
-- ✅ Longest Substring Without Repeating Characters completed
-- ✅ Container With Most Water completed
-- ✅ SQL: Find Duplicate Emails completed
+- ✅ Longest Substring Without Repeating Characters completed - 10/10
+- ✅ Container With Most Water completed - 10/10
+- ✅ SQL: Find Duplicate Emails completed - 10/10
 - 🔄 Prefix Sum scaffolds created for Subarray Sum Equals K and Find Pivot Index
 
 ### Session 2 + 1 SQL (Contains Duplicate, Best Time to Buy Stock, SQL: Employees by Department)

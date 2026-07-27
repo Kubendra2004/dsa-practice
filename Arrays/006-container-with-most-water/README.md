@@ -31,3 +31,8 @@ Start with the widest possible container and move the pointer at the shorter lin
 ## Practice Goal
 
 This is a standard two-pointer interview problem. Once this feels natural, move to prefix sums next.
+
+## Interview Rating
+
+- Approach: ⭐⭐⭐⭐⭐
+- Confidence to explain in interview: High

@@ -34,3 +34,8 @@ When a repeated character appears inside the current window, move the left bound
 ## Practice Goal
 
 If you can solve this cleanly, you understand the basic sliding window template well enough to move to the next common variant: fixed-size windows or frequency-based windows.
+
+## Interview Rating
+
+- Approach: ⭐⭐⭐⭐⭐
+- Confidence to explain in interview: High
