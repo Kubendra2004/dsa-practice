@@ -34,6 +34,8 @@ If the current prefix sum is `sum`, then every previous prefix sum equal to `sum
 - Java implementation: [SubarraySumEqualsK.java](SubarraySumEqualsK.java)
 - Python reinforcement: [subarray_sum_equals_k.ipynb](subarray_sum_equals_k.ipynb)
 
+**Interview Rating:** 4/5
+
 ## Practice Goal
 
 If you can explain this clearly, you are ready for the next prefix-sum variant: pivot-style index balancing or range sum queries.

@@ -30,6 +30,8 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | 004 | Two Sum II (Sorted)                 | Easy       | Two-Pointer               | O(n) / O(1)               | ✅ Complete |
 | 005 | Longest Substring Without Repeating | Easy       | Sliding Window, HashMap   | O(n) / O(min(n, charset)) | ✅ Complete |
 | 006 | Container With Most Water           | Easy       | Two-Pointer, Area Formula | O(n) / O(1)               | ✅ Complete |
+| 007 | Subarray Sum Equals K             | Medium     | Prefix Sum, HashMap     | O(n) / O(n)               | ✅ Complete |
+| 008 | Find Pivot Index                | Easy       | Prefix Sum / Running Sum | O(n) / O(1)               | ⏳ In Progress |
 
 ### **SQL Fundamentals**
 
@@ -48,7 +50,7 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 ✅ Two-Pointer Technique (Two Sum II)  
 ✅ Sliding Window (Longest Substring)  
 ✅ Two-Pointer Variants (Container With Most Water)  
-🔄 Prefix Sums (Next)  
+✅ Prefix Sums (Partial - 1 of 2 complete)  
 ⏳ Stack & Queue (Later)  
 ⏳ Advanced Patterns (Later)
 
@@ -140,11 +142,11 @@ leetcode-solutions/
 
 ### Session 4: July 27, 2026 (In Progress)
 
-**Problems:** 2 DSA prefix-sum problems in progress  
-**Focus:** Subarray Sum Equals K, Find Pivot Index
+**Problems:** 1 DSA complete, 1 in progress (prefix-sum)  
+**Focus:** Subarray Sum Equals K ✅ | Find Pivot Index ⏳
 
-- 🔄 Problem 7: Subarray Sum Equals K
-- 🔄 Problem 8: Find Pivot Index
+- ✅ Problem 7: Subarray Sum Equals K (rated 4/5)
+- ⏳ Problem 8: Find Pivot Index
 
 ---
 

@@ -1,15 +1,6 @@
 
 import java.util.HashMap;
-import java.util.Map;
 
-/**
- * LeetCode 560: Subarray Sum Equals K
- *
- * Problem: Given an array of integers nums and an integer k, return the total
- * number of continuous subarrays whose sum equals to k.
- *
- * Concept: Prefix Sum + HashMap Difficulty: Medium
- */
 public class SubarraySumEqualsK {
 
     /**
@@ -20,8 +11,25 @@ public class SubarraySumEqualsK {
      * @return the number of subarrays with sum equal to k
      */
     public int subarraySum(int[] nums, int k) {
-        // TODO: Implement your solution here
-        return 0;
+        int count = 0;
+        int cursum = 0;
+        HashMap<Integer, Integer> presum = new HashMap<>();
+        presum.put(0, 1);
+        for (int i = 0; i < nums.length; i++) {
+            cursum += nums[i];
+            int target = cursum - k;
+            if (presum.containsKey(target)) {
+                count += presum.get(target);
+            }
+            if (presum.containsKey(cursum)) {
+                int pastFrequency = presum.get(cursum);
+                // Put it back in the map, adding 1 to its frequency
+                presum.put(cursum, pastFrequency + 1);
+            } else {
+                presum.put(cursum, 1);
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args) {
