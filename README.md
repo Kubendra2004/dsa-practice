@@ -42,9 +42,6 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | 001 | Employees by Department | Easy       | JOIN, GROUP BY, HAVING, Aggregation | ✅ Complete |
 | 002 | Find Duplicate Emails   | Easy       | GROUP BY, HAVING, COUNT             | ✅ Complete |
 | 003 | Customers Who Never Order | Easy     | LEFT JOIN, IS NULL                   | ✅ Complete |
-| 001 | Employees by Department | Easy       | JOIN, GROUP BY, HAVING, Aggregation | ✅ Complete |
-| 002 | Find Duplicate Emails   | Easy       | GROUP BY, HAVING, COUNT             | ✅ Complete |
-| 003 | Customers Who Never Order | Easy     | LEFT JOIN, IS NULL                   | ✅ Complete |
 | 004 | University SELECT/WHERE | Easy      | SELECT, WHERE, ORDER BY              | ⏳ In Progress |
 
 ---
@@ -169,9 +166,9 @@ leetcode-solutions/
 **Problems:** 2 DSA + 1 SQL  
 **Rating:** 8.7/10
 
-- ✅ Subarray Sum Equals K completed - 4/5
-- ✅ Find Pivot Index completed - 3/5
-- ✅ SQL: Customers Who Never Order completed - 3.5/5
+- ✅ Subarray Sum Equals K completed - 8/10
+- ✅ Find Pivot Index completed - 6/10
+- ✅ SQL: Customers Who Never Order completed - 7/10
 
 ### Session 5: In Progress (July 28, 2026)
 

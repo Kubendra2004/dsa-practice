@@ -34,7 +34,7 @@ At each index, the right sum is `total_sum - left_sum - nums[i]`. If left sum eq
 - Java implementation: [FindPivotIndex.java](FindPivotIndex.java)
 - Python reinforcement: [find_pivot_index.ipynb](find_pivot_index.ipynb)
 
-**Interview Rating:** 3/5
+**Interview Rating:** 6/10
 
 ## Practice Goal
 

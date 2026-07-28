@@ -74,3 +74,5 @@ Max
 ---
 
 **Next Step:** Write your query in `solution.sql` and verify it against the sample data.
+
+**Interview Rating:** 7/10

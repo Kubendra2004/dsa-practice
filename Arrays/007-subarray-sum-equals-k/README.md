@@ -34,7 +34,7 @@ If the current prefix sum is `sum`, then every previous prefix sum equal to `sum
 - Java implementation: [SubarraySumEqualsK.java](SubarraySumEqualsK.java)
 - Python reinforcement: [subarray_sum_equals_k.ipynb](subarray_sum_equals_k.ipynb)
 
-**Interview Rating:** 4/5
+**Interview Rating:** 8/10
 
 ## Practice Goal
 
