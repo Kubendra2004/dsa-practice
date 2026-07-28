@@ -19,6 +19,19 @@ public class FindPivotIndex {
      */
     public int pivotIndex(int[] nums) {
         // TODO: Implement your solution here
+        int totsum = 0;
+        for (int num:nums) {
+            totsum += num;
+        }
+        int leftsum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int rightsum = totsum - leftsum - nums[i];
+
+            if (leftsum == rightsum) {
+                return i;
+            }
+            leftsum += nums[i];
+        }
         return -1;
     }
 

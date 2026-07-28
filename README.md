@@ -39,6 +39,7 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | --- | ----------------------- | ---------- | ----------------------------------- | ----------- |
 | 001 | Employees by Department | Easy       | JOIN, GROUP BY, HAVING, Aggregation | ✅ Complete |
 | 002 | Find Duplicate Emails   | Easy       | GROUP BY, HAVING, COUNT             | ✅ Complete |
+| 003 | Customers Who Never Order | Easy     | LEFT JOIN, IS NULL                  | ⏳ In Progress |
 
 ---
 
@@ -104,7 +105,11 @@ leetcode-solutions/
     │   ├── README.md
     │   ├── schema.sql
     │   └── solution.sql
-    └── 002-duplicate-emails/
+    ├── 002-duplicate-emails/
+    │   ├── README.md
+    │   ├── schema.sql
+    │   └── solution.sql
+    └── 003-customers-who-never-order/
         ├── README.md
         ├── schema.sql
         └── solution.sql
@@ -142,11 +147,12 @@ leetcode-solutions/
 
 ### Session 4: July 27, 2026 (In Progress)
 
-**Problems:** 1 DSA complete, 1 in progress (prefix-sum)  
-**Focus:** Subarray Sum Equals K ✅ | Find Pivot Index ⏳
+**Problems:** 1 DSA complete, 1 DSA in progress, 1 SQL in progress (prefix-sum + SQL)  
+**Focus:** Subarray Sum Equals K ✅ | Find Pivot Index ⏳ | Customers Who Never Order ⏳
 
 - ✅ Problem 7: Subarray Sum Equals K (rated 4/5)
 - ⏳ Problem 8: Find Pivot Index
+- ⏳ SQL 003: Customers Who Never Order
 
 ---
 
