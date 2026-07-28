@@ -32,6 +32,8 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | 006 | Container With Most Water           | Easy       | Two-Pointer, Area Formula | O(n) / O(1)               | ✅ Complete |
 | 007 | Subarray Sum Equals K             | Medium     | Prefix Sum, HashMap     | O(n) / O(n)               | ✅ Complete |
 | 008 | Find Pivot Index                | Easy       | Prefix Sum / Running Sum | O(n) / O(1)               | ✅ Complete |
+| 009 | Move Zeroes                     | Easy       | Two-Pointer, In-Place   | O(n) / O(1)               | ⏳ In Progress |
+| 010 | Remove Duplicates from Sorted   | Easy       | Two-Pointer, Slow/Fast  | O(n) / O(1)               | ⏳ In Progress |
 
 ### **SQL Fundamentals**
 
@@ -39,7 +41,11 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | --- | ----------------------- | ---------- | ----------------------------------- | ----------- |
 | 001 | Employees by Department | Easy       | JOIN, GROUP BY, HAVING, Aggregation | ✅ Complete |
 | 002 | Find Duplicate Emails   | Easy       | GROUP BY, HAVING, COUNT             | ✅ Complete |
-| 003 | Customers Who Never Order | Easy     | LEFT JOIN, IS NULL                  | ⏳ In Progress |
+| 003 | Customers Who Never Order | Easy     | LEFT JOIN, IS NULL                   | ✅ Complete |
+| 001 | Employees by Department | Easy       | JOIN, GROUP BY, HAVING, Aggregation | ✅ Complete |
+| 002 | Find Duplicate Emails   | Easy       | GROUP BY, HAVING, COUNT             | ✅ Complete |
+| 003 | Customers Who Never Order | Easy     | LEFT JOIN, IS NULL                   | ✅ Complete |
+| 004 | University SELECT/WHERE | Easy      | SELECT, WHERE, ORDER BY              | ⏳ In Progress |
 
 ---
 
@@ -51,14 +57,15 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 ✅ Two-Pointer Technique (Two Sum II)  
 ✅ Sliding Window (Longest Substring)  
 ✅ Two-Pointer Variants (Container With Most Water)  
+⏳ Two-Pointer: Move Zeroes, Remove Duplicates (In Progress)  
 ✅ Prefix Sums (Complete - 2 of 2)  
 ⏳ Stack & Queue (Later)  
 ⏳ Advanced Patterns (Later)
 
 ### Upcoming: **SQL Fundamentals**
 
-✅ Basic SELECT, WHERE, JOIN  
-⏳ GROUP BY, HAVING, Aggregations  
+✅ Basic SELECT, WHERE, JOIN, ORDER BY
+⏳ GROUP BY, HAVING, Aggregations
 ⏳ Subqueries & CTEs
 
 ---
@@ -96,9 +103,17 @@ leetcode-solutions/
 │   │   ├── SubarraySumEqualsK.java
 │   │   ├── subarray_sum_equals_k.ipynb
 │   │   └── README.md
-│   └── 008-find-pivot-index/
+│   ├── 008-find-pivot-index/
 │       ├── FindPivotIndex.java
 │       ├── find_pivot_index.ipynb
+│       └── README.md
+│   ├── 009-move-zeroes/
+│   │   ├── MoveZeroes.java
+│   │   ├── move_zeroes.ipynb
+│   │   └── README.md
+│   └── 010-remove-duplicates/
+│       ├── RemoveDuplicates.java
+│       ├── remove_duplicates.ipynb
 │       └── README.md
 └── SQL/
     ├── 001-employees-by-department/
@@ -110,6 +125,10 @@ leetcode-solutions/
     │   ├── schema.sql
     │   └── solution.sql
     └── 003-customers-who-never-order/
+        ├── README.md
+        ├── schema.sql
+        └── solution.sql
+    └── 004-university-basic-select/
         ├── README.md
         ├── schema.sql
         └── solution.sql
@@ -154,9 +173,14 @@ leetcode-solutions/
 - ✅ Find Pivot Index completed - 3/5
 - ✅ SQL: Customers Who Never Order completed - 3.5/5
 
-### Session 5: Upcoming
+### Session 5: In Progress (July 28, 2026)
 
-**Problems:** TBD
+**Problems:** 2 DSA Array + 1 SQL  
+**Focus:** Two-Pointer / In-Place Array Manipulation + SELECT/WHERE/ORDER BY
+
+- ⏳ DSA 009: Move Zeroes
+- ⏳ DSA 010: Remove Duplicates from Sorted Array
+- ⏳ SQL 004: University SELECT/WHERE/ORDER BY
 
 ---
 
