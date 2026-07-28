@@ -31,7 +31,7 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | 005 | Longest Substring Without Repeating | Easy       | Sliding Window, HashMap   | O(n) / O(min(n, charset)) | ✅ Complete |
 | 006 | Container With Most Water           | Easy       | Two-Pointer, Area Formula | O(n) / O(1)               | ✅ Complete |
 | 007 | Subarray Sum Equals K             | Medium     | Prefix Sum, HashMap     | O(n) / O(n)               | ✅ Complete |
-| 008 | Find Pivot Index                | Easy       | Prefix Sum / Running Sum | O(n) / O(1)               | ⏳ In Progress |
+| 008 | Find Pivot Index                | Easy       | Prefix Sum / Running Sum | O(n) / O(1)               | ✅ Complete |
 
 ### **SQL Fundamentals**
 
@@ -51,13 +51,13 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 ✅ Two-Pointer Technique (Two Sum II)  
 ✅ Sliding Window (Longest Substring)  
 ✅ Two-Pointer Variants (Container With Most Water)  
-✅ Prefix Sums (Partial - 1 of 2 complete)  
+✅ Prefix Sums (Complete - 2 of 2)  
 ⏳ Stack & Queue (Later)  
 ⏳ Advanced Patterns (Later)
 
 ### Upcoming: **SQL Fundamentals**
 
-🔄 Basic SELECT, WHERE, JOIN  
+✅ Basic SELECT, WHERE, JOIN  
 ⏳ GROUP BY, HAVING, Aggregations  
 ⏳ Subqueries & CTEs
 
@@ -145,14 +145,18 @@ leetcode-solutions/
 - ✅ Container With Most Water completed - 10/10
 - ✅ SQL: Find Duplicate Emails completed - 10/10
 
-### Session 4: July 27, 2026 (In Progress)
+### Session 4: July 27-28, 2026 (Completed)
 
-**Problems:** 1 DSA complete, 1 DSA in progress, 1 SQL in progress (prefix-sum + SQL)  
-**Focus:** Subarray Sum Equals K ✅ | Find Pivot Index ⏳ | Customers Who Never Order ⏳
+**Problems:** 2 DSA + 1 SQL  
+**Rating:** 8.7/10
 
-- ✅ Problem 7: Subarray Sum Equals K (rated 4/5)
-- ⏳ Problem 8: Find Pivot Index
-- ⏳ SQL 003: Customers Who Never Order
+- ✅ Subarray Sum Equals K completed - 4/5
+- ✅ Find Pivot Index completed - 3/5
+- ✅ SQL: Customers Who Never Order completed - 3.5/5
+
+### Session 5: Upcoming
+
+**Problems:** TBD
 
 ---
 

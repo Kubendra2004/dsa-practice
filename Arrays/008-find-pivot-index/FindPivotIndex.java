@@ -18,7 +18,6 @@ public class FindPivotIndex {
      * @return the pivot index, or -1 if it does not exist
      */
     public int pivotIndex(int[] nums) {
-        // TODO: Implement your solution here
         int totsum = 0;
         for (int num:nums) {
             totsum += num;
