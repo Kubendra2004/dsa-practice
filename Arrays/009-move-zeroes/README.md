@@ -6,17 +6,33 @@ Given an integer array `nums`, move all `0`'s to the end of it while maintaining
 
 Do this in-place without making a copy of the array.
 
-## Pattern
+## Algorithm Type
 
 Two-Pointer Technique — write pointer tracks the position to place the next non-zero element.
 
-## Why This Problem Matters
+## Solution Approach
 
-This is a foundational two-pointer problem that teaches in-place array manipulation. The write-pointer pattern is used in many array problems where elements need to be filtered or rearranged without extra space.
+1. Initialize a `write` pointer at index 0.
+2. Iterate through the array with a `read` pointer.
+3. Every time `nums[read] != 0`, copy it to `nums[write]` and increment `write`.
+4. After the scan, fill all positions from `write` to the end with zeroes.
 
 ## Core Idea
 
-Use a `write` pointer starting at 0. Scan the array with a `read` pointer. Every time you encounter a non-zero element, write it at the `write` position and increment `write`. After the scan, fill all positions from `write` to the end with zeroes.
+Use a write pointer to compact non-zero elements to the front in a single pass. Then fill the remaining positions with zeroes.
+
+## Pseudocode
+
+```
+function moveZeroes(nums):
+    write = 0
+    for read from 0 to len(nums) - 1:
+        if nums[read] != 0:
+            nums[write] = nums[read]
+            write += 1
+    for i from write to len(nums) - 1:
+        nums[i] = 0
+```
 
 ## Complexity
 
@@ -39,4 +55,4 @@ Use a `write` pointer starting at 0. Scan the array with a `read` pointer. Every
 
 If you can explain the two-pointer write-pattern clearly, you are ready for the next array variant: removing duplicates from a sorted array.
 
-**Interview Rating:** 3/5
+**Interview Rating:** 3/10 (扣7分: 过于简单，two-pointer write pattern太基础，毫无算法深度可言)

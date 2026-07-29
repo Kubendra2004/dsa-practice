@@ -6,37 +6,68 @@ Given an integer array `nums`, return all the unique triplets `[nums[i], nums[j]
 
 The solution set must not contain duplicate triplets.
 
-## Pattern
+## Algorithm Type
 
-Two-Pointer — sort the array, fix one element, and use two pointers to find pairs that complete the triplet.
+**Two-Pointer** — sort the array, fix one element, then use two pointers to find pairs that sum to the negation of the fixed element.
 
-## Why This Problem Matters
+## Solution Approach
 
-3Sum is one of the most important prefix-sum-adjacent problems and a very common interview question. It teaches how to reduce a brute-force O(n^3) problem to O(n^2) using sorting + two pointers, and how to handle duplicate elimination cleanly.
+1. Sort the array in non-decreasing order.
+2. Iterate through each element `nums[i]` as the fixed first element of the triplet.
+3. For each `i`, set `target = -nums[i]`. Use two pointers (`left = i + 1`, `right = len(nums) - 1`) to find pairs that sum to `target`.
+4. If `nums[left] + nums[right] < target`, increment `left` to increase the sum.
+5. If `nums[left] + nums[right] > target`, decrement `right` to decrease the sum.
+6. If `nums[left] + nums[right] == target`, record the triplet. Skip duplicate values for `left` and `right` to avoid duplicate triplets in the result.
+7. On the outer loop, skip duplicate values for `i` as well.
 
 ## Core Idea
 
-Sort the array. For each element `nums[i]`, use two pointers (`left = i + 1`, `right = len(nums) - 1`) to find pairs where `nums[left] + nums[right] == -nums[i]`. Skip duplicates for `i`, `left`, and `right` to avoid duplicate triplets.
+Sorting transforms the 3Sum problem into a series of 2Sum problems. For each fixed element, two pointers scan inward from both ends of the remaining sorted subarray, efficiently finding complementary pairs.
+
+## Pseudocode
+
+```
+function threeSum(nums):
+    sort nums in ascending order
+    result = []
+    for i from 0 to len(nums) - 3:
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue  // skip duplicate first elements
+        target = -nums[i]
+        left = i + 1
+        right = len(nums) - 1
+        while left < right:
+            sum = nums[left] + nums[right]
+            if sum < target:
+                left += 1
+            elif sum > target:
+                right -= 1
+            else:  // sum == target
+                result.append([nums[i], nums[left], nums[right]])
+                while left < right and nums[left] == nums[left + 1]:
+                    left += 1  // skip duplicate left values
+                while left < right and nums[right] == nums[right - 1]:
+                    right -= 1  // skip duplicate right values
+                left += 1
+                right -= 1
+    return result
+```
 
 ## Complexity
 
-- Time: `O(n^2)`
-- Space: `O(1)` (excluding output)
+- Time: `O(n^2)` — sorting is `O(n log n)`, the nested two-pointer scan is `O(n^2)`
+- Space: `O(1)` excluding output (or `O(n)` if sorting uses extra space)
 
 ## Edge Cases
 
-- Array with fewer than 3 elements returns `[]`
-- All zeroes returns `[[0,0,0]]`
-- No valid triplet returns `[]`
-- Duplicate elements in array — must deduplicate results
+- Array with fewer than 3 elements — return empty list
+- All zeroes — return `[[0,0,0]]`
+- No valid triplet exists — return empty list
+- Duplicate elements in array — must deduplicate both outer loop and inner pair
 
 ## Language Notes
 
 - Java implementation: [ThreeSum.java](ThreeSum.java)
 - Python reinforcement: [three_sum.ipynb](three_sum.ipynb)
 
-## Practice Goal
-
-If you can explain the two-pointer deduplication strategy clearly, you are ready for the next array pattern: prefix product / prefix sum variants for product-based problems.
-
-**Interview Rating:** 7/10
+**Interview Rating:** 7/10 (扣3分: duplicate skipping logic is the main trap; otherwise standard two-pointer after sort)

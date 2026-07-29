@@ -1,20 +1,31 @@
-# LeetCode 53: Maximum Subarray
+## Algorithm Type
 
-## Problem
+**Kadane's Algorithm (Dynamic Programming)** — track the maximum subarray sum ending at each position.
 
-Given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+## Solution Approach
 
-## Pattern
-
-Kadane's Algorithm — dynamic programming where you track the maximum subarray sum ending at each position.
-
-## Why This Problem Matters
-
-This is the canonical dynamic programming problem on arrays and one of the most frequently asked interview questions. It teaches the concept of local vs. global optima in a single pass.
+1. Initialize two variables: `current_max = nums[0]` and `global_max = nums[0]`.
+2. Iterate from index 1 to the end of the array.
+3. At each index `i`, decide whether to extend the existing subarray or start a new one:
+   - `current_max = max(nums[i], current_max + nums[i])`
+4. Update `global_max = max(global_max, current_max)`.
+5. After the iteration, `global_max` holds the maximum subarray sum.
 
 ## Core Idea
 
-At each index, decide whether to extend the current subarray or start a new one. Track the maximum sum seen so far. If the running sum drops below zero, reset it — a negative running sum cannot contribute to a maximum subarray.
+At each position, the maximum subarray ending there is either: (a) just the current element itself, or (b) the current element added to the previous maximum subarray. If the running sum becomes negative, it's better to start fresh from the next element.
+
+## Pseudocode
+
+```
+function maxSubArray(nums):
+    current_max = nums[0]
+    global_max = nums[0]
+    for i from 1 to len(nums) - 1:
+        current_max = max(nums[i], current_max + nums[i])
+        global_max = max(global_max, current_max)
+    return global_max
+```
 
 ## Complexity
 
@@ -23,7 +34,7 @@ At each index, decide whether to extend the current subarray or start a new one.
 
 ## Edge Cases
 
-- All negative numbers — return the largest (least negative) element
+- All negative numbers — Kadane's returns the largest (least negative) single element
 - Single-element array — return that element
 - All positive numbers — return the sum of the entire array
 
@@ -34,6 +45,6 @@ At each index, decide whether to extend the current subarray or start a new one.
 
 ## Practice Goal
 
-If you can explain Kadane's algorithm and why resetting on negative running sums works, you are ready for the next pattern: in-place matrix marking problems.
+If you can explain Kadane's algorithm and why resetting on negative running sums works, you are ready for in-place matrix marking problems.
 
-**Interview Rating:** 7/10
+**Interview Rating:** 7/10 (扣3分: 经典DP但变体少, 全负数边界需要特殊注意)

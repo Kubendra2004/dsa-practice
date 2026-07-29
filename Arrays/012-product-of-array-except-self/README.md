@@ -1,41 +1,54 @@
-# LeetCode 238: Product of Array Except Self
+## Algorithm Type
 
-## Problem
+**Prefix Product / Suffix Product** — compute running products from both ends and combine.
 
-Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
+## Solution Approach
 
-Solve it in O(n) time and without using division.
-
-## Pattern
-
-Prefix Product — compute running product from the left and from the right, then combine.
-
-## Why This Problem Matters
-
-This is a classic prefix-product problem that tests whether you can compute cumulative products from both directions without extra space. It's a direct extension of the prefix sum concept and is frequently asked in interviews.
+1. Initialize an output array `result` of the same length as `nums`, filled with 1s.
+2. First pass (left to right): maintain a running `prefix` product. For each index `i`, set `result[i] = prefix` then update `prefix *= nums[i]`.
+3. Second pass (right to left): maintain a running `suffix` product. For each index `i`, multiply `result[i] *= suffix` then update `suffix *= nums[i]`.
+4. After both passes, `result[i]` equals the product of all elements except `nums[i]`.
 
 ## Core Idea
 
-For each index `i`, the result is the product of all elements to the left of `i` multiplied by the product of all elements to the right of `i`. Compute these running products in two passes using the output array itself for O(1) extra space.
+Each element's result is the product of all elements to its left multiplied by the product of all elements to its right. Two passes (one from each direction) compute this in O(1) extra space (excluding output).
+
+## Pseudocode
+
+```
+function productExceptSelf(nums):
+    n = len(nums)
+    result = array of size n filled with 1
+    
+    // Left pass: result[i] = product of all elements to the left of i
+    prefix = 1
+    for i from 0 to n - 1:
+        result[i] = prefix
+        prefix = prefix * nums[i]
+    
+    // Right pass: multiply result[i] by product of all elements to the right of i
+    suffix = 1
+    for i from n - 1 down to 0:
+        result[i] = result[i] * suffix
+        suffix = suffix * nums[i]
+    
+    return result
+```
 
 ## Complexity
 
-- Time: `O(n)`
-- Space: `O(1)` (excluding output array)
+- Time: `O(n)` — two linear passes
+- Space: `O(1)` excluding output array
 
 ## Edge Cases
 
-- Array with one zero — all results are zero except the zero position
+- Array with one zero — all results are zero except the zero position (which equals the product of all other elements)
 - Array with multiple zeroes — all results are zero
-- Two-element array — simple swap
+- Two-element array — simple multiplication swap
 
 ## Language Notes
 
 - Java implementation: [ProductExceptSelf.java](ProductExceptSelf.java)
 - Python reinforcement: [product_except_self.ipynb](product_except_self.ipynb)
 
-## Practice Goal
-
-If you can explain the two-pass prefix/suffix product approach clearly, you are ready for Kadane's algorithm for maximum subarray problems.
-
-**Interview Rating:** 7/10
+**Interview Rating:** 7/10 (扣3分: 需要用output数组做workaround来实现O(1)空间，思路巧妙但概念不特别深入)

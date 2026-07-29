@@ -3,45 +3,51 @@
 ## Problem Statement
 Write a SQL query to find all numbers that appear at least three times consecutively in the Logs table. Return them in any order.
 
-## Concept
-- **Self-Join** — join the table to itself to compare consecutive rows
-- **Advanced** — window functions or LAG/LEAD for consecutive detection
+## Algorithm Type
 
-## Difficulty
-Hard
+**Self-Join** — join the table to itself to compare consecutive rows by id. Advanced alternative uses **LAG/LEAD** window functions.
 
-## Schema
+## Solution Approach
 
-### Table: `Logs`
-| Column Name | Type | Description       |
-|-------------|------|-------------------|
-| id          | INT  | Log ID (PK)       |
-| num         | INT  | The logged number |
+1. Use a self-join: join `Logs l1` to `Logs l2` where `l1.id = l2.id - 1` (next row), and to `Logs l3` where `l1.id = l3.id - 2` (row after next).
+2. Check if `l1.num = l2.num` AND `l1.num = l3.num` — all three consecutive rows have the same number.
+3. Use DISTINCT to avoid duplicates.
 
-## Sample Data
+Alternative approach:
+- Use **LAG()** window function to look back one and two rows, then compare all three values.
 
-**Logs:**
+## Core Idea
+
+Consecutive rows can be compared by joining on sequential id values. Each row is joined with the two rows that follow it, forming a sliding window of three consecutive records.
+
+## Pseudocode (SQL)
+
+```sql
+-- Primary approach: Self-Join
+SELECT DISTINCT l1.num AS ConsecutiveNums
+FROM Logs l1
+JOIN Logs l2 ON l1.id = l2.id - 1
+JOIN Logs l3 ON l1.id = l3.id - 2
+WHERE l1.num = l2.num
+  AND l1.num = l3.num;
+
+-- Alternative: Using LAG window function
+WITH Nums AS (
+    SELECT
+        num,
+        LAG(num, 1) OVER (ORDER BY id) AS prev1,
+        LAG(num, 2) OVER (ORDER BY id) AS prev2
+    FROM Logs
+)
+SELECT DISTINCT num AS ConsecutiveNums
+FROM Nums
+WHERE num = prev1 AND num = prev2;
 ```
-id | num
----|-----
-1  | 1
-2  | 1
-3  | 1
-4  | 2
-5  | 1
-6  | 2
-7  | 2
-```
 
-## Expected Output
+## Complexity
 
-```
-ConsecutiveNums
----------------
-1
-```
-
-**Explanation:** 1 is the only number that appears three times in a row (id 1, 2, 3).
+- Time: `O(n)` for self-join or window function (database-dependent)
+- Space: `O(n)` for the window function CTE
 
 ## Constraints
 - The Logs table has at most 1000 rows
@@ -58,4 +64,4 @@ ConsecutiveNums
 
 **Next Step:** Write your query in `solution.sql` and verify it against the sample data.
 
-**Interview Rating:** 8/10
+**Interview Rating:** 8/10 (扣2分: Consecutive number detection is niche; self-join approach is standard but LAG/LEAD alternative shows deeper SQL knowledge)

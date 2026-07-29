@@ -3,73 +3,54 @@
 ## Problem Statement
 Write a SQL query to find employees who earn in the top 3 salaries of their department. Return department name, employee name, and salary.
 
-## Concept
-- **Window Functions** — RANK() or DENSE_RANK() to rank salaries within a department
-- **CTE** — common table expression for cleaner structure
-- **JOIN** — join ranked results with department table
+## Algorithm Type
 
-## Difficulty
-Hard
+**Window Functions (RANK/DENSE_RANK) + CTE** — rank salaries within each department, then filter for top 3.
 
-## Schema
+## Solution Approach
 
-### Table: `Employee`
-| Column Name    | Type    | Description              |
-|----------------|---------|--------------------------|
-| id             | INT     | Employee ID (PK)       |
-| name           | VARCHAR | Employee name            |
-| salary         | INT     | Salary amount            |
-| departmentId   | INT     | References Department.id |
+1. Use a CTE (Common Table Expression) to rank employees by salary within each department.
+2. Use **DENSE_RANK()** (or RANK()) partitioned by `departmentId` and ordered by `salary DESC`.
+3. Filter for rank <= 3 to get top 3 earners per department.
+4. JOIN with the Department table to get department names.
 
-### Table: `Department`
-| Column Name | Type    | Description            |
-|-------------|---------|------------------------|
-| id          | INT     | Department ID (PK)    |
-| name        | VARCHAR | Department name        |
+## Core Idea
 
-## Sample Data
+Window functions allow ranking within partitions without collapsing rows. DENSE_RANK ensures no gaps in ranking (important when salaries tie). The CTE makes the query readable and modular.
 
-**Department:**
-```
-id | name
----|------
-1  | IT
-2  | Sales
-```
+## Pseudocode (SQL)
 
-**Employee:**
-```
-id | name    | salary | departmentId
----|---------|--------|-------------
-1  | Joe     | 70000  | 1
-2  | Henry   | 80000  | 2
-3  | Sam     | 60000  | 2
-4  | Max     | 90000  | 1
-5  | Janet   | 69000  | 1
-6  | Randy   | 85000  | 1
-7  | Will    | 70000  | 2
+```sql
+-- Primary approach: DENSE_RANK window function + CTE
+WITH RankedSalaries AS (
+    SELECT
+        e.name AS EmployeeName,
+        e.salary,
+        e.departmentId,
+        DENSE_RANK() OVER (
+            PARTITION BY e.departmentId
+            ORDER BY e.salary DESC
+        ) AS salary_rank
+    FROM Employee e
+)
+SELECT d.name AS Department, r.EmployeeName, r.salary
+FROM RankedSalaries r
+JOIN Department d ON r.departmentId = d.id
+WHERE r.salary_rank <= 3
+ORDER BY d.name, r.salary DESC;
 ```
 
-## Expected Output
+## Complexity
 
-```
-department | name  | salary
------------|-------|-------
-IT         | Max   | 90000
-IT         | Randy | 85000
-IT         | Joe   | 70000
-IT         | Janet | 69000
-Sales      | Henry | 80000
-Sales      | Will  | 70000
-Sales      | Sam   | 60000
-```
+- Time: `O(n log n)` for window function sorting
+- Space: `O(n)` for the CTE result
 
 ## Constraints
 - Each department has at least 3 employees
 - Salaries are positive integers
 
 ## Hints (Don't peek unless stuck!)
-1. Use **DENSE_RANK()** or **RANK()** partitioned by departmentId, ordered by salary DESC.
+1. Use **DENSE_RANK()** partitioned by departmentId, ordered by salary DESC.
 2. Filter for rank <= 3.
 3. Join with the Department table to get department names.
 4. A CTE (Common Table Expression) makes the query cleaner.
@@ -78,4 +59,4 @@ Sales      | Sam   | 60000
 
 **Next Step:** Write your query in `solution.sql` and verify it against the sample data.
 
-**Interview Rating:** 8/10
+**Interview Rating:** 8/10 (扣2分: Window functions are advanced SQL, but problem structure follows a standard CTE + RANK pattern)

@@ -4,19 +4,23 @@
 
 Given an integer array `nums` and an integer `k`, return the number of continuous subarrays whose sum equals `k`.
 
-## Pattern
+## Algorithm Type
 
 Prefix Sum + Hash Map
 
-## Why This Problem Matters
+## Solution Approach
 
-This is one of the most common prefix-sum interview problems. It tests whether you can turn a subarray-sum counting problem into a running-prefix frequency lookup.
+1. Initialize a hashmap to store prefix sum frequencies, starting with `{0: 1}`.
+2. Iterate through the array, maintaining a running cumulative sum.
+3. At each index, compute `target = current_sum - k`.
+4. If `target` exists in the hashmap, add its frequency to the count.
+5. Update the hashmap with the current prefix sum frequency.
+6. Return the total count.
 
 ## Core Idea
 
-Track how many times each prefix sum has appeared so far.
+Track how many times each prefix sum has appeared so far. If the current prefix sum is `sum`, then every previous prefix sum equal to `sum - k` forms a valid subarray ending at the current index.
 
-If the current prefix sum is `sum`, then every previous prefix sum equal to `sum - k` forms a valid subarray ending at the current index.
 
 ## Complexity
 
@@ -34,7 +38,7 @@ If the current prefix sum is `sum`, then every previous prefix sum equal to `sum
 - Java implementation: [SubarraySumEqualsK.java](SubarraySumEqualsK.java)
 - Python reinforcement: [subarray_sum_equals_k.ipynb](subarray_sum_equals_k.ipynb)
 
-**Interview Rating:** 8/10
+**Interview Rating:** 8/10 (扣2分: 负数+k=0场景对初学者有陷阱，对HashMap操作边界不熟会出错)
 
 ## Practice Goal
 

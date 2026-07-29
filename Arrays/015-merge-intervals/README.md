@@ -1,40 +1,51 @@
-# LeetCode 56: Merge Intervals
+## Algorithm Type
 
-## Problem
+**Sort + Merge** — sort intervals by start time, then merge overlapping ones by extending the end boundary.
 
-Given an array of `intervals` where `intervals[i] = [starti, endi]`, merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+## Solution Approach
 
-## Pattern
-
-Sort + Merge — sort by start time, then extend the end boundary when intervals overlap.
-
-## Why This Problem Matters
-
-Interval merging is a fundamental pattern for scheduling and range-based problems. It teaches how to sort by one dimension and then merge based on overlap, which is a common real-world scenario.
+1. Sort the intervals by start time.
+2. Initialize a result list with the first interval.
+3. Iterate through the remaining intervals:
+   - If the current interval overlaps with the last interval in the result (i.e., `current_start <= last_end`), merge them by extending `last_end = max(last_end, current_end)`.
+   - Otherwise, add the current interval as a new entry in the result.
+4. Return the merged result list.
 
 ## Core Idea
 
-Sort intervals by start time. Iterate and merge: if the current interval overlaps with the last merged interval (current start <= last end), extend the last end. Otherwise, add the current interval as a new entry.
+Sorting by start time ensures that overlapping intervals are adjacent. A single linear pass then suffices to merge them all.
+
+## Pseudocode
+
+```
+function merge(intervals):
+    sort intervals by start time
+    result = [intervals[0]]
+    for i from 1 to len(intervals) - 1:
+        if intervals[i].start <= result[-1].end:
+            // Overlapping — extend the end
+            result[-1].end = max(result[-1].end, intervals[i].end)
+        else:
+            // Non-overlapping — add new interval
+            result.append(intervals[i])
+    return result
+```
 
 ## Complexity
 
-- Time: `O(n log n)` (for sorting)
-- Space: `O(n)` (for output, or `O(1)` if sorting in-place)
+- Time: `O(n log n)` — dominated by sorting
+- Space: `O(n)` for the output list (or `O(1)` if sorting in-place)
 
 ## Edge Cases
 
 - No overlapping intervals — return as-is
 - All intervals overlap — merge into one
-- Single interval — return it
-- Intervals that are adjacent (e.g., [1,4], [4,5]) — should merge
+- Single interval — return it unchanged
+- Adjacent intervals `[1,4], [4,5]` — should merge to `[1,5]`
 
 ## Language Notes
 
 - Java implementation: [MergeIntervals.java](MergeIntervals.java)
 - Python reinforcement: [merge_intervals.ipynb](merge_intervals.ipynb)
 
-## Practice Goal
-
-If you can explain the sort-then-merge strategy clearly, you are ready for matrix traversal problems like rotating a matrix.
-
-**Interview Rating:** 7/10
+**Interview Rating:** 7/10 (扣3分: sort-then-merge is standard, but edge cases with adjacent intervals trip candidates up)

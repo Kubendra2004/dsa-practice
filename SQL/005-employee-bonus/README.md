@@ -3,62 +3,43 @@
 ## Problem Statement
 Write a SQL query to find all employees whose bonus is less than 1000. Return their name and bonus amount (NULL if they have no bonus record).
 
-## Concept
-- **LEFT JOIN** — keep all employees and include those without bonus records
-- **IS NULL** — handle employees with no bonus entry
-- **OR** — combine conditions for missing and low bonuses
+## Algorithm Type
 
-## Difficulty
-Easy
+**LEFT JOIN + IS NULL** — keep all employees and include those without bonus records, then filter.
 
-## Schema
+## Solution Approach
 
-### Table: `Employee`
-| Column Name  | Type      | Description              |
-|--------------|-----------|--------------------------|
-| id           | INT       | Employee ID (PK)       |
-| name         | VARCHAR   | Employee name            |
-| managerId    | INT       | References Employee.id   |
+1. Use **LEFT JOIN** from `Employee` to `Bonus` on `Employee.id = Bonus.id`.
+2. LEFT JOIN preserves all employee rows even when there's no matching bonus entry.
+3. Filter with `WHERE b.amount < 1000 OR b.amount IS NULL` to include both low bonuses and missing bonus records.
+4. Alternatively, use `COALESCE(b.amount, 0) < 1000` to treat NULL as 0.
 
-### Table: `Bonus`
-| Column Name | Type | Description       |
-|-------------|------|-------------------|
-| id          | INT  | Employee ID (FK) |
-| amount      | INT  | Bonus amount      |
+## Core Idea
 
-## Sample Data
+A LEFT JOIN keeps all rows from the left table. When an employee has no bonus entry, the bonus columns are NULL. The `IS NULL` check combined with the `< 1000` condition captures both explicit low bonuses and missing bonus records.
 
-**Employee:**
-```
-id | name  | managerId
----|-------|----------
-1  | John  | NULL
-2  | Dan   | 1
-3  | Mike  | 1
-4  | Ralph | NULL
-5  | Tom   | 1
+## Pseudocode (SQL)
+
+```sql
+-- Primary approach: LEFT JOIN + IS NULL
+SELECT e.name, b.amount
+FROM Employee e
+LEFT JOIN Bonus b ON e.id = b.id
+WHERE b.amount < 1000 OR b.amount IS NULL
+ORDER BY e.name;
+
+-- Alternative: Using COALESCE
+SELECT e.name, b.amount
+FROM Employee e
+LEFT JOIN Bonus b ON e.id = b.id
+WHERE COALESCE(b.amount, 0) < 1000
+ORDER BY e.name;
 ```
 
-**Bonus:**
-```
-id | amount
----|--------
-2  | 500
-4  | 2000
-```
+## Complexity
 
-## Expected Output
-
-```
-name | bonus
------|------
-Dan  | 500
-John | NULL
-Mike | NULL
-Tom  | NULL
-```
-
-**Explanation:** Ralph is excluded because he has a bonus of 2000. John, Mike, and Tom have no bonus record (NULL) which is less than 1000. Dan has a bonus of 500 which is less than 1000.
+- Time: `O(n + m)` — hash join or merge join depending on DB engine
+- Space: Depends on query optimizer
 
 ## Constraints
 - Employee id is the primary key
@@ -75,4 +56,4 @@ Tom  | NULL
 
 **Next Step:** Write your query in `solution.sql` and verify it against the sample data.
 
-**Interview Rating:** 5/10
+**Interview Rating:** 5/10 (扣5分: LEFT JOIN + NULL handling is a fundamental skill, but this problem has limited variation and no complex aggregation)
