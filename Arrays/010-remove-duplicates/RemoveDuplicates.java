@@ -1,3 +1,4 @@
+
 public class RemoveDuplicates {
 
     /**
@@ -9,7 +10,16 @@ public class RemoveDuplicates {
      */
     public int removeDuplicates(int[] nums) {
         // TODO: Implement your solution here
-        return 0;
+        int writer = 1;
+        int reader = 1;
+        while (reader < nums.length) {
+            if (nums[reader] != nums[writer - 1]) {
+                nums[writer] = nums[reader];
+                writer++;
+            }
+            reader++;
+        }
+        return writer;
     }
 
     public static void main(String[] args) {
@@ -24,7 +34,9 @@ public class RemoveDuplicates {
         System.out.print("Got array: [");
         for (int i = 0; i < result1; i++) {
             System.out.print(nums1[i]);
-            if (i < result1 - 1) System.out.print(",");
+            if (i < result1 - 1) {
+                System.out.print(",");
+            }
         }
         System.out.println("]");
         System.out.println();
@@ -38,7 +50,9 @@ public class RemoveDuplicates {
         System.out.print("Got array: [");
         for (int i = 0; i < result2; i++) {
             System.out.print(nums2[i]);
-            if (i < result2 - 1) System.out.print(",");
+            if (i < result2 - 1) {
+                System.out.print(",");
+            }
         }
         System.out.println("]");
         System.out.println();
@@ -52,7 +66,9 @@ public class RemoveDuplicates {
         System.out.print("Got array: [");
         for (int i = 0; i < result3; i++) {
             System.out.print(nums3[i]);
-            if (i < result3 - 1) System.out.print(",");
+            if (i < result3 - 1) {
+                System.out.print(",");
+            }
         }
         System.out.println("]");
     }

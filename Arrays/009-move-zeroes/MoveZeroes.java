@@ -1,3 +1,4 @@
+
 public class MoveZeroes {
 
     /**
@@ -8,6 +9,17 @@ public class MoveZeroes {
      */
     public void moveZeroes(int[] nums) {
         // TODO: Implement your solution here
+        int writer = 0;
+        int reader = 0;
+        while (reader < nums.length) {
+            if (nums[reader] != 0) {
+                int temp = nums[reader];
+                nums[reader] = nums[writer];
+                nums[writer] = temp;
+                writer++;
+            }
+            reader++;
+        }
     }
 
     public static void main(String[] args) {
@@ -21,7 +33,9 @@ public class MoveZeroes {
         System.out.print("Got: [");
         for (int i = 0; i < nums1.length; i++) {
             System.out.print(nums1[i]);
-            if (i < nums1.length - 1) System.out.print(",");
+            if (i < nums1.length - 1) {
+                System.out.print(",");
+            }
         }
         System.out.println("]");
         System.out.println();
@@ -34,7 +48,9 @@ public class MoveZeroes {
         System.out.print("Got: [");
         for (int i = 0; i < nums2.length; i++) {
             System.out.print(nums2[i]);
-            if (i < nums2.length - 1) System.out.print(",");
+            if (i < nums2.length - 1) {
+                System.out.print(",");
+            }
         }
         System.out.println("]");
         System.out.println();
@@ -47,7 +63,9 @@ public class MoveZeroes {
         System.out.print("Got: [");
         for (int i = 0; i < nums3.length; i++) {
             System.out.print(nums3[i]);
-            if (i < nums3.length - 1) System.out.print(",");
+            if (i < nums3.length - 1) {
+                System.out.print(",");
+            }
         }
         System.out.println("]");
     }

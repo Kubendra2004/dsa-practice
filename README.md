@@ -32,8 +32,8 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | 006 | Container With Most Water           | Easy       | Two-Pointer, Area Formula | O(n) / O(1)               | ✅ Complete |
 | 007 | Subarray Sum Equals K             | Medium     | Prefix Sum, HashMap     | O(n) / O(n)               | ✅ Complete |
 | 008 | Find Pivot Index                | Easy       | Prefix Sum / Running Sum | O(n) / O(1)               | ✅ Complete |
-| 009 | Move Zeroes                     | Easy       | Two-Pointer, In-Place   | O(n) / O(1)               | ⏳ In Progress |
-| 010 | Remove Duplicates from Sorted   | Easy       | Two-Pointer, Slow/Fast  | O(n) / O(1)               | ⏳ In Progress |
+| 009 | Move Zeroes                     | Easy       | Two-Pointer, In-Place   | O(n) / O(1)               | ✅ Complete |
+| 010 | Remove Duplicates from Sorted   | Easy       | Two-Pointer, Slow/Fast  | O(n) / O(1)               | ✅ Complete |
 
 ### **SQL Fundamentals**
 
@@ -52,16 +52,15 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 ✅ Hashing & Sets (Contains Duplicate, Two Sum)  
 ✅ Greedy Algorithms (Stock Problem)  
 ✅ Two-Pointer Technique (Two Sum II)  
-✅ Sliding Window (Longest Substring)  
 ✅ Two-Pointer Variants (Container With Most Water)  
-⏳ Two-Pointer: Move Zeroes, Remove Duplicates (In Progress)  
+✅ Two-Pointer: Move Zeroes, Remove Duplicates (Complete - 2 of 2)  
 ✅ Prefix Sums (Complete - 2 of 2)  
 ⏳ Stack & Queue (Later)  
 ⏳ Advanced Patterns (Later)
 
 ### Upcoming: **SQL Fundamentals**
 
-✅ Basic SELECT, WHERE, JOIN, ORDER BY
+⏳ Basic SELECT, WHERE, JOIN, ORDER BY (In Progress)
 ⏳ GROUP BY, HAVING, Aggregations
 ⏳ Subqueries & CTEs
 
@@ -170,14 +169,18 @@ leetcode-solutions/
 - ✅ Find Pivot Index completed - 6/10
 - ✅ SQL: Customers Who Never Order completed - 7/10
 
-### Session 5: In Progress (July 28, 2026)
+### Session 5: July 28-29, 2026 (Completed)
 
-**Problems:** 2 DSA Array + 1 SQL  
-**Focus:** Two-Pointer / In-Place Array Manipulation + SELECT/WHERE/ORDER BY
+**Problems:** 2 DSA + 1 SQL  
+**Rating:** TBD
 
-- ⏳ DSA 009: Move Zeroes
-- ⏳ DSA 010: Remove Duplicates from Sorted Array
-- ⏳ SQL 004: University SELECT/WHERE/ORDER BY
+- ✅ DSA 009: Move Zeroes (LC 283) - 3/5
+- ✅ DSA 010: Remove Duplicates from Sorted Array (LC 26) - 3/5
+- ⏳ SQL 004: University SELECT/WHERE/ORDER BY (still in progress)
+
+### Session 6: Upcoming
+
+**Problems:** TBD
 
 ---
 
