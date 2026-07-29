@@ -1,0 +1,2 @@
+-- SQL Problem 006: Second Highest Salary
+-- Write query to find the second highest salary, or NULL if it doesn't exist.

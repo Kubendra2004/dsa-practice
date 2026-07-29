@@ -1,0 +1,2 @@
+-- SQL Problem 007: Department Top 3 Salaries
+-- Write query to find employees who earn in the top 3 salaries of their department.

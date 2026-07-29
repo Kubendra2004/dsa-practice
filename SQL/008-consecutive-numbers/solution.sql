@@ -1,0 +1,2 @@
+-- SQL Problem 008: Consecutive Numbers
+-- Write query to find all numbers that appear at least three times consecutively.

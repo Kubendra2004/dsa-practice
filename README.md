@@ -34,6 +34,14 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | 008 | Find Pivot Index                | Easy       | Prefix Sum / Running Sum | O(n) / O(1)               | ✅ Complete |
 | 009 | Move Zeroes                     | Easy       | Two-Pointer, In-Place   | O(n) / O(1)               | ✅ Complete |
 | 010 | Remove Duplicates from Sorted   | Easy       | Two-Pointer, Slow/Fast  | O(n) / O(1)               | ✅ Complete |
+| 011 | 3Sum                            | Medium     | Two-Pointer, Sort       | O(n^2) / O(1)            | ⏳ In Progress |
+| 012 | Product of Array Except Self  | Medium     | Prefix Product          | O(n) / O(1)              | ⏳ In Progress |
+| 013 | Maximum Subarray              | Medium     | Kadane's Algorithm      | O(n) / O(1)              | ⏳ In Progress |
+| 014 | Set Matrix Zeroes             | Medium     | In-Place Marking        | O(m*n) / O(1)            | ⏳ In Progress |
+| 015 | Merge Intervals               | Medium     | Sort + Merge            | O(n log n) / O(n)        | ⏳ In Progress |
+| 016 | Rotate Image                  | Medium     | Transpose + Reverse     | O(n^2) / O(1)            | ⏳ In Progress |
+| 017 | Trapping Rain Water           | Hard       | Two-Pointer, Boundaries | O(n) / O(1)              | ⏳ In Progress |
+| 018 | Search in Rotated Sorted      | Medium     | Binary Search           | O(log n) / O(1)          | ⏳ In Progress |
 
 ### **SQL Fundamentals**
 
@@ -42,7 +50,11 @@ Each problem lives in `Topic/{number}-{short-title}/` with:
 | 001 | Employees by Department | Easy       | JOIN, GROUP BY, HAVING, Aggregation | ✅ Complete |
 | 002 | Find Duplicate Emails   | Easy       | GROUP BY, HAVING, COUNT             | ✅ Complete |
 | 003 | Customers Who Never Order | Easy     | LEFT JOIN, IS NULL                   | ✅ Complete |
-| 004 | University SELECT/WHERE | Easy      | SELECT, WHERE, ORDER BY              | ⏳ In Progress |
+| 004 | University SELECT/WHERE | Easy      | SELECT, WHERE, ORDER BY              | ✅ Complete |
+| 005 | Employee Bonus          | Easy      | LEFT JOIN, IS NULL, NULL Handling   | ⏳ In Progress |
+| 006 | Second Highest Salary   | Easy      | ORDER BY, LIMIT, Subquery           | ⏳ In Progress |
+| 007 | Department Top 3 Salaries | Hard     | Window Functions, CTEs, RANK        | ⏳ In Progress |
+| 008 | Consecutive Numbers     | Hard      | Self-Join, LAG/LEAD                 | ⏳ In Progress |
 
 ---
 
@@ -172,15 +184,47 @@ leetcode-solutions/
 ### Session 5: July 28-29, 2026 (Completed)
 
 **Problems:** 2 DSA + 1 SQL  
-**Rating:** TBD
+**Rating:** 7/10
 
-- ✅ DSA 009: Move Zeroes (LC 283) - 3/5
-- ✅ DSA 010: Remove Duplicates from Sorted Array (LC 26) - 3/5
-- ⏳ SQL 004: University SELECT/WHERE/ORDER BY (still in progress)
+- ✅ DSA 009: Move Zeroes (LC 283) - 3/10
+- ✅ DSA 010: Remove Duplicates from Sorted Array (LC 26) - 3/10
+- ✅ SQL 004: University SELECT/WHERE/ORDER BY - 5/10
 
-### Session 6: Upcoming
+### Session 6: July 29 (In Progress)
 
-**Problems:** TBD
+**Problems:** 2 DSA Array + 1 SQL  
+**Focus:** Two-Pointer / Prefix Product / JOINs
+
+- ⏳ DSA 011: 3Sum (LC 15)
+- ⏳ DSA 012: Product of Array Except Self (LC 238)
+- ⏳ SQL 005: Employee Bonus (LEFT JOIN, NULL)
+
+### Session 7: Upcoming
+
+**Problems:** 2 DSA Array + 1 SQL  
+**Focus:** Kadane's / In-Place Marking / Subqueries
+
+- ⏳ DSA 013: Maximum Subarray (LC 53)
+- ⏳ DSA 014: Set Matrix Zeroes (LC 73)
+- ⏳ SQL 006: Second Highest Salary
+
+### Session 8: Upcoming
+
+**Problems:** 2 DSA Array + 1 SQL  
+**Focus:** Sort+Merge / Matrix Rotation / Window Functions
+
+- ⏳ DSA 015: Merge Intervals (LC 56)
+- ⏳ DSA 016: Rotate Image (LC 48)
+- ⏳ SQL 007: Department Top 3 Salaries
+
+### Session 9: Upcoming
+
+**Problems:** 2 DSA Array + 1 SQL  
+**Focus:** Boundary Two-Pointer / Binary Search / Self-Join
+
+- ⏳ DSA 017: Trapping Rain Water (LC 42)
+- ⏳ DSA 018: Search in Rotated Sorted Array (LC 33)
+- ⏳ SQL 008: Consecutive Numbers
 
 ---
 
